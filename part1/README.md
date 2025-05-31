@@ -1,5 +1,16 @@
 # Hbnb Project Holberton School
 
+## Summary
+
+1. [Introduction](##Introduction).
+2. [High-Level Architecture](##High-LevelArchitecture)
+3. [Business Logic Layer](##BusinessLogicLayer)
+4. [API Interaction Flow](##APIInteractionFlow)
+    - [User Registration Diagram](###UserRegistrationDiagram)
+    - [Place Creation Diagram](###PlaceCreationDiagram)
+    - [Review Submission Diagram](###ReviewSubmissionDiagram)
+    - [Fetching a List of Places Diagram](###FetchingaListofPlacesDiagram)
+
 ## Introduction
 
 The Hbnb project is a groupe project where we need to create
@@ -15,4 +26,19 @@ a copy of the Airbnb site to learn the basic of web programmation
 
 ## API Interaction Flow
 
-![Sequence Diagrame for API CALL](/SequenceDiagram_1_UserRegistration.png)
+### User Registration Diagram
+
+![Sequence Diagrame for API CALL](/part1/SequenceDiagram_1_UserRegistration.png)
+
+### Place Creation Diagram
+
+![Sequence Diagrame for API CALL](/part1/SequenceDiagram_2_PlaceCreation.png)
+
+### Review Submission Diagram
+
+![Sequence Diagrame for API CALL](/part1/SequenceDiagram_3_ReviewSubmission.png)
+
+
+### Fetching a List of Places Diagram
+
+![Sequence Diagrame for API CALL](/part1/SequenceDiagram_4_PlacesCritera.png)
