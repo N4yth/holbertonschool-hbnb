@@ -15,4 +15,4 @@ a copy of the Airbnb site to learn the basic of web programmation
 
 ## API Interaction Flow
 
-!(/SequenceDiagram_1_UserRegistration.png)
+![Sequence Diagrame for API CALL](/SequenceDiagram_1_UserRegistration.png)
