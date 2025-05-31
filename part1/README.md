@@ -3,13 +3,13 @@
 ## Summary
 
 1. [Introduction](#Introduction).
-2. [High-Level Architecture](#High-LevelArchitecture)
-3. [Business Logic Layer](#BusinessLogicLayer)
-4. [API Interaction Flow](#APIInteractionFlow)
-    - [User Registration Diagram](#UserRegistrationDiagram)
-    - [Place Creation Diagram](#PlaceCreationDiagram)
-    - [Review Submission Diagram](#ReviewSubmissionDiagram)
-    - [Fetching a List of Places Diagram](#FetchingaListofPlacesDiagram)
+2. [High-Level Architecture](#High-Level-Architecture)
+3. [Business Logic Layer](#Business-Logic-Layer)
+4. [API Interaction Flow](#API-Interaction-Flow)
+    - [User Registration Diagram](#User-Registration-Diagram)
+    - [Place Creation Diagram](#Place-Creation-Diagram)
+    - [Review Submission Diagram](#Review-Submission-Diagram)
+    - [Fetching a List of Places Diagram](#Fetching-a-List-of-Places-Diagram)
 
 ## Introduction
 
