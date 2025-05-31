@@ -15,4 +15,4 @@ a copy of the Airbnb site to learn the basic of web programmation
 
 ## API Interaction Flow
 
-
+!(https://github.com/N4yth/holbertonschool-hbnb/blob/main/part1/SequenceDiagram_1_UserRegistration.png)
