@@ -27,12 +27,12 @@ The Hbnb project is a groupe project where we need to createa copy of the Airbnb
 
 Purpose : Sequence Diagram represente how the site will communicate with the API, the Database and the front (User)  
 key compennent :  
-    - User : the "User" participant represent a User that will interact with the front of the site  
-    - API : The "API" participant represent the Backend of the site that will receive the information from the front  
-    - BusinessLogic : the "Business Logic" participant represent all the controle that we will do to the Data receive by the API  
-    - Database : the "Databasec" participant represent the Database of the site that will stock all information of place and User  
+- User : the "User" participant represent a User that will interact with the front of the site  
+- API : The "API" participant represent the Backend of the site that will receive the information from the front  
+- BusinessLogic : the "Business Logic" participant represent all the controle that we will do to the Data receive by the API  
+- Database : the "Databasec" participant represent the Database of the site that will stock all information of place and User  
 
-### User Registration Diagram
+### User Registration Diagram  
 
 ![Sequence Diagrame for API CALL](/part1/SequenceDiagram_1_UserRegistration.png)
 
@@ -44,15 +44,15 @@ key compennent :
 6 step : The user can see the message (Sucess or Fail to create is account)   
 
 
-### Place Creation Diagram
+### Place Creation Diagram  
 
 ![Sequence Diagrame for API CALL](/part1/SequenceDiagram_2_PlaceCreation.png)
 
-### Review Submission Diagram
+### Review Submission Diagram  
 
 ![Sequence Diagrame for API CALL](/part1/SequenceDiagram_3_ReviewSubmission.png)
 
 
-### Fetching a List of Places Diagram
+### Fetching a List of Places Diagram  
 
 ![Sequence Diagrame for API CALL](/part1/SequenceDiagram_4_PlacesCritera.png)
