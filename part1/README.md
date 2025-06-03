@@ -109,6 +109,124 @@ BusinessLogicLayer --> PersistenceLayer : Database Operations
 ## Business Logic Layer
 
 
+## 1. Detailed Class Diagram for Business Logic Layer  
+**Mandatory Task**
+
+### 🧩 Objective  
+Design a comprehensive **class diagram** for the **Business Logic Layer** of the HBNB application. This diagram should detail the internal structure of the core entities (`User`, `Place`, `Review`, `Amenity`), their attributes, methods, and relationships (association, inheritance, composition).
+
+---
+
+### 📋 Description  
+In this task, you will model the **core domain entities** of the application that encapsulate the main logic of HBNB. These classes define how data is structured, validated, and manipulated before being passed to the persistence layer or exposed to the API.
+
+---
+
+### 🛠️ Steps to Complete the Task
+
+#### 1. **Review the Business Requirements**  
+Understand how each core entity behaves:
+- What attributes are mandatory?
+- How do these objects relate to each other?
+- What actions (methods) should each object support?
+
+#### 2. **Identify Key Attributes and Methods**  
+Each entity must include:
+- A unique identifier (e.g., `id: UUID4`)
+- Timestamps (`created_at`, `updated_at`)
+- Domain-specific fields (e.g., `email`, `description`, `price`, etc.)
+- Business methods (e.g., `save()`, `delete()`, `update()`)
+
+#### 3. **Design the UML Class Diagram**
+Use UML notation to:
+- Represent classes with their attributes and methods
+- Define **associations** (e.g., a `Place` has many `Reviews`)
+- Show **compositions** (e.g., `Place` *contains* `Amenity`)
+- Indicate **inheritance** (e.g., all classes inherit from `BaseModel`)
+
+#### 4. **Refine and Review**
+- Validate the accuracy and consistency of class relationships.
+- Ensure your diagram aligns with the actual business logic and object-oriented design.
+- Revise based on peer/team feedback.
+
+---
+
+### 🌐 Mermaid.js Example
+
+You can use [Mermaid.js](https://mermaid.js.org/syntax/classDiagram.html) to create and maintain your diagram:
+
+```mermaid
+classDiagram
+    class BaseModel {
+        +UUID id
+        +DateTime created_at
+        +DateTime updated_at
+        +save()
+        +delete()
+    }
+
+    class User {
+        +String email
+        +String password
+        +String first_name
+        +String last_name
+    }
+
+    class Place {
+        +String name
+        +String description
+        +Float price
+        +String city
+    }
+
+    class Review {
+        +String text
+        +Integer rating
+    }
+
+    class Amenity {
+        +String name
+    }
+
+    BaseModel <|-- User
+    BaseModel <|-- Place
+    BaseModel <|-- Review
+    BaseModel <|-- Amenity
+
+    User "1" --> "*" Place : owns >
+    Place "1" --> "*" Review : receives >
+    Place "*" --> "*" Amenity : includes >
+    Review "*" --> "1" User : written_by >
+
+
+### 📘 Explanatory Notes
+
+#### ✅ Entities Overview
+
+- **User**: Represents a registered user. Handles authentication and ownership of Places and Reviews.
+- **Place**: Represents a rental location. Owned by a User. Can have multiple Reviews and Amenities.
+- **Review**: Written by a User for a Place. Includes text feedback and a rating.
+- **Amenity**: Optional features (e.g., Wi-Fi, parking) associated with Places.
+- **BaseModel**: Common base class for all entities, managing UUID, timestamps, and basic persistence methods.
+
+---
+
+#### 🔗 Relationships Summary
+
+- **User ↔ Place**: One-to-many (a user can own multiple places)
+- **Place ↔ Review**: One-to-many (a place can receive many reviews)
+- **Place ↔ Amenity**: Many-to-many (places can have multiple amenities and vice versa)
+- **User ↔ Review**: One-to-many (a user can write many reviews)
+
+---
+
+### 📚 Recommended Resources
+
+- [UML Class Diagram – Tutorial](https://www.uml-diagrams.org/class-diagrams-overview.html)
+- [SOLID Principles](https://www.baeldung.com/solid-principles)
+- [Mermaid Class Diagrams](https://mermaid.js.org/syntax/classDiagram.html)
+
+
 
 ## API Interaction Flow
 
