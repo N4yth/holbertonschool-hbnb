@@ -106,18 +106,21 @@ BusinessLogicLayer --> PersistenceLayer : Database Operations
 
 
 
+
 ## Business Logic Layer
 
 
 ## 1. Detailed Class Diagram for Business Logic Layer  
-**Mandatory Task**
+
 
 ### 🧩 Objective  
+
 Design a comprehensive **class diagram** for the **Business Logic Layer** of the HBNB application. This diagram should detail the internal structure of the core entities (`User`, `Place`, `Review`, `Amenity`), their attributes, methods, and relationships (association, inheritance, composition).
 
 ---
 
 ### 📋 Description  
+
 In this task, you will model the **core domain entities** of the application that encapsulate the main logic of HBNB. These classes define how data is structured, validated, and manipulated before being passed to the persistence layer or exposed to the API.
 
 ---
@@ -125,12 +128,14 @@ In this task, you will model the **core domain entities** of the application tha
 ### 🛠️ Steps to Complete the Task
 
 #### 1. **Review the Business Requirements**  
+
 Understand how each core entity behaves:
 - What attributes are mandatory?
 - How do these objects relate to each other?
 - What actions (methods) should each object support?
 
 #### 2. **Identify Key Attributes and Methods**  
+
 Each entity must include:
 - A unique identifier (e.g., `id: UUID4`)
 - Timestamps (`created_at`, `updated_at`)
@@ -138,6 +143,7 @@ Each entity must include:
 - Business methods (e.g., `save()`, `delete()`, `update()`)
 
 #### 3. **Design the UML Class Diagram**
+
 Use UML notation to:
 - Represent classes with their attributes and methods
 - Define **associations** (e.g., a `Place` has many `Reviews`)
@@ -145,6 +151,7 @@ Use UML notation to:
 - Indicate **inheritance** (e.g., all classes inherit from `BaseModel`)
 
 #### 4. **Refine and Review**
+
 - Validate the accuracy and consistency of class relationships.
 - Ensure your diagram aligns with the actual business logic and object-oriented design.
 - Revise based on peer/team feedback.
@@ -197,6 +204,8 @@ classDiagram
     Place "1" --> "*" Review : receives >
     Place "*" --> "*" Amenity : includes >
     Review "*" --> "1" User : written_by >
+
+```
 
 
 ### 📘 Explanatory Notes
