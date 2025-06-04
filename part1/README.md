@@ -6,10 +6,10 @@
 2. [High-Level Architecture](#2-High-Level-Package-Diagram)
 3. [Business Logic Layer](#3-Detailed-Class-Diagram-for-Business-Logic-Layer)
 4. [API Interaction Flow](#4-API-Interaction-Flow)  
-    - [User Registration Diagram](#4.1-User-Registration-Diagram)  
-    - [Place Creation Diagram](#4.2-Place-Creation-Diagram)  
-    - [Review Submission Diagram](#4.3-Review-Submission-Diagram)  
-    - [Fetching a List of Places Diagram](#4.4-Fetching-a-List-of-Places-Diagram)  
+    - [User Registration Diagram](#41-User-Registration-Diagram)  
+    - [Place Creation Diagram](#42-Place-Creation-Diagram)  
+    - [Review Submission Diagram](#43-Review-Submission-Diagram)  
+    - [Fetching a List of Places Diagram](#44-Fetching-a-List-of-Places-Diagram)  
 
 ## 1. Introduction to the projet
 
