@@ -2,10 +2,10 @@
 
 ## Summary
 
-1. [Introduction](#1.-Introduction-to-the-projet).
-2. [High-Level Architecture](#2.-High-Level-Package-Diagram)
-3. [Business Logic Layer](#3.-Detailed-Class-Diagram-for-Business-Logic-Layer)
-4. [API Interaction Flow](#4.-API-Interaction-Flow)  
+1. [Introduction](#1-Introduction-to-the-projet).
+2. [High-Level Architecture](#2-High-Level-Package-Diagram)
+3. [Business Logic Layer](#3-Detailed-Class-Diagram-for-Business-Logic-Layer)
+4. [API Interaction Flow](#4-API-Interaction-Flow)  
     - [User Registration Diagram](#4.1-User-Registration-Diagram)  
     - [Place Creation Diagram](#4.2-Place-Creation-Diagram)  
     - [Review Submission Diagram](#4.3-Review-Submission-Diagram)  
