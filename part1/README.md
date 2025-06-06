@@ -13,31 +13,31 @@
 
 ## 1. Introduction to the projet  
 
-The Hbnb project is a groupe project where we need to create a copy of the Airbnb site to learn the basic of web programmation. It will be procide in 4 step.  
+The Hbnb project is a group project where we have to create a copy of the Airbnb site to learn the basics of web pragramming. It will be done in 4 step.  
 
 - **first step :**  
-create 6 diagram, 1 of High Level Package, 1 of Detailed Class for Business Logic Layer and 4 for the API Interaction Flow. With that create we have an great global view of our site.  
+Create 6 diagrams, 1 of High Level Package, 1 of Detailed Class for Business Logic Layer and 4 for the API Interaction Flow. With that create we have a great and global view of our site.  
 - **seconde step :**  
-create the API an the Business Logic Layer...  
+Create the API and the Business Logic Layer...  
 - **third step :**  
-create the database...  
+Create the database...  
 - **fourth step :**  
-create the web client...  
+Create the web client...  
 
 ## 2. High-Level Package Diagram  
 
 ![High-Level Package Diagram](/part1/High_level_diagram.png)  
 
 **Purpose :**  
-This diagram is use to show the architecture of the HBnB application and the comunication between layer. The diagram is an overview of how the different compinenet of the application are organized and how they interact. He will do not show the details of each Layer but give a large overview.  
+This diagram is use to show the architecture of the HBnB application and the comunication between layer. The diagram is an overview of how the different components of the application are organized and how they interact. He will not show the detail of each Layer but give a large overview.  
 
 **Key component :**  
 
-- *PresenationLayer :* This layer handle inforation beteewn the user (in the front) and the Back and have all methode that is use by the API to test te information (those methode name is visible by the front so the User).  
-    -  *Facade pattern :* is the separation on what the user avec visibility.  
+- *PresenationLayer :* This layer handle the inforation beteewn the user (in the front) and the Back and have all method that is use by the API to test te information (those method name is visible by the front so the User).  
+    -  *Facade pattern :* Is the separation on what the user have visibility and what he can't see.  
 - *BusinessLogicLayer :* This layer handle the data communication to the Database Operation he have acces to methode to save update delete or list data.  
-    - *Database Operations :* is the methode use to acces the Database.  
-- *BusinessLogicLayer :* This layer is the way to acces to de Database.  
+    - *Database Operations :* Is the methode use to acces the Database.  
+- *PersistenceLayer :* This layer is the way to acces to de Database.  
 
 ## 3. Detailed Class Diagram for Business Logic Layer  
 
@@ -45,14 +45,14 @@ This diagram is use to show the architecture of the HBnB application and the com
 
 **Purpose :**  
 
-show the details of all the classes in the Business Logic Layer their attribute (Type and Name) and methode (return and parameter) and at final show the dependance between the different class.  
+This diagram shows the details of all the classes in the Business Logic Layer, including their attributes (type and name) and methods (return type and parameters), and finally shows the dependencies between the different classes.  
 
 **class :** 
 
-- *User :* This class represente a user with his personnal information (e.g. age, first_name, last_name...) and it have a List of review and another List of places. This class also contain the creation date of the place and the last time data was update and possesses some methode to list/update/insert/delete data.  
-- *Place :* This class represente a place with it caracteristic information (e.g. name, owner, localisation,...)it also contain the creation date of the place and the last time data was update and it have some methode to list/update/insert/delete data.  
-- *Amenity :* This class represente one amenity of an place with some variable like her name, description, if this amenity is public or not, when she is create and when data as been modified.  
-- *Review :* This class represente a review given by a user at a place contain the content of the review his date of creation and update and some methode use to list/update/insert/delete data.  
+- *User :* This class represents a user with their personal information (e.g., age, first_name, last_name, etc.) and contains a list of reviews and another list of places. It also includes the creation date of the user and the last time the data was updated, and provides methods to list, update, insert, and delete data.  
+- *Place :* This class represents a place with their caracteristic information (e.g. name, owner, localisation,...)it also includes the creation date of the place and the last time the place data was updated and provides methods to list, update, insert, and delete data.  
+- *Amenity :* This class represente one amenity of an place with some variable like her name, description, if this amenity is public or not, when she is create, when data as been modified and provides methods to list, update, insert, and delete data.  
+- *Review :* This class represente a review given by a user for a place. It contain the content of the review his date of creation, his date of modification and provides methods to list, update, insert, and delete data.   
 
 **Relation between Class :**  
 
