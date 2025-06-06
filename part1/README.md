@@ -16,7 +16,7 @@
 The Hbnb project is a group project where we have to create a copy of the Airbnb site to learn the basics of web pragramming. It will be done in 4 step.  
 
 - **first step :**  
-Create 6 diagrams, 1 of High Level Package, 1 of Detailed Class for Business Logic Layer and 4 for the API Interaction Flow. With that create we have a great and global view of our site.  
+Create 6 diagrams, 1 of High Level Package, 1 of Detailed Class for Business Logic Layer and 4 for the API Interaction Flow. With that created we have a great and global view of our site.  
 - **seconde step :**  
 Create the API and the Business Logic Layer...  
 - **third step :**  
@@ -29,7 +29,7 @@ Create the web client...
 ![High-Level Package Diagram](/part1/High_level_diagram.png)  
 
 **Purpose :**  
-This diagram is use to show the architecture of the HBnB application and the comunication between layer. The diagram is an overview of how the different components of the application are organized and how they interact. He will not show the detail of each Layer but give a large overview.  
+This diagram shows the architecture of the HBnB application and the comunication between layers. The diagram is an overview of how the different components of the application are organized and how they interact. He will not show the detail of each Layer but give a large overview.  
 
 **Key component :**  
 
@@ -49,10 +49,10 @@ This diagram shows the details of all the classes in the Business Logic Layer, i
 
 **class :** 
 
-- *User :* This class represents a user with their personal information (e.g., age, first_name, last_name, etc.) and contains a list of reviews and another list of places. It also includes the creation date of the user and the last time the data was updated, and provides methods to list, update, insert, and delete data.  
-- *Place :* This class represents a place with their caracteristic information (e.g. name, owner, localisation,...)it also includes the creation date of the place and the last time the place data was updated and provides methods to list, update, insert, and delete data.  
-- *Amenity :* This class represente one amenity of an place with some variable like her name, description, if this amenity is public or not, when she is create, when data as been modified and provides methods to list, update, insert, and delete data.  
-- *Review :* This class represente a review given by a user for a place. It contain the content of the review his date of creation, his date of modification and provides methods to list, update, insert, and delete data.   
+- *User :* This class represents a user with his personal information (e.g., age, first_name, last_name, etc.) and contains a list of reviews and another list of places. It also includes the creation date of the user and the last time the data was updated, and provides methods to list, update, insert, and delete data.  
+- *Place :* This class represents a place with its caracteristic information (e.g. name, owner, localisation,...)it also includes the creation date of the place and the last time the place data was updated and provides methods to list, update, insert, and delete data.  
+- *Amenity :* This class represents one amenity of an place with some variable like her name, description, if this amenity is public or not, when she is create, when data as been modified and provides methods to list, update, insert, and delete data.  
+- *Review :* This class represents a review given by a user for a place. It contain the content of the review his date of creation, his date of modification and provides methods to list, update, insert, and delete data.   
 
 **Relation between Class :**  
 
