@@ -1,6 +1,6 @@
-# Holberton School HBNB - Part 2 🌍  
+# Holberton School HBNB - Part 2  
 
-## Overview 🏗️  
+## Overview 
 This project is part of the Holberton School curriculum and represents the second stage of the HBNB project. It focuses on building a web application using Python, Flask, and other technologies.  
 
 ## Key Features 🔹  
