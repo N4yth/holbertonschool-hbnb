@@ -1,13 +1,5 @@
-/* 
-  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
-*/
-
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --button-color:#ffd30f;
-  --button-color-hover:#c29f04;
+
   --font-family-place-title: 'Roboto', sans-serif;
   --font-family: 'Roboto', sans-serif;
 }
@@ -44,51 +36,41 @@
     margin: 5px;
 }
 
-.place-card, .review-card{
+.place-card{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 10px;
     color: #333;
     height: 10rem;
     width: 16rem;
-    background-color: white;
+    background-color: var(--secondary-color);
 }
 
-.details-button {
-    width: 7rem;
-    height: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: var(--button-color);
-    margin: 3px;
-    font-family: var(--font-family);
-}
-
-    
-#index-button, #login-button, #logout-button {
-    height: 1.75rem;
-    width: 4rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 0.5rem;
-}
-
-.button {
-    background-color: var(--button-color);
-}
-
-.button:hover {
-    cursor: pointer;
-    background-color: var(--button-color-hover);
-    transform: translateY(-3px);
-    box-shadow: 1px 1px 1px 1px #333;
+#filter {
+    color:#333
 }
 
 .place-card:hover {
     transform: translateY(-5px);
     box-shadow: 1px 1px 1px 1px #333;
+}
+
+.button {
+    height: 5dvh;
+    width: 15dvh;
+    background-color: var(--secondary-color);
+}
+
+.details-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 1px 1px #333;
+    border-color: var(--primary-color);
+}
+
+.button::before {
+    background: var(--third-color);
 }
