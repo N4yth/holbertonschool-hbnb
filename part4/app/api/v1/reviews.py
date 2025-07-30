@@ -6,6 +6,7 @@ api = Namespace('reviews', description='Review operations')
 
 review_model = api.model('Review', {
     'place_id': fields.String(required=True, description='Place ID'),
+    'title': fields.String(required=True, description='Title of the review'),
     'rating': fields.Integer(required=True, description='Rating of the place (1-5)'),
     'comment': fields.String(required=True, description='Text of review')
 })
@@ -31,6 +32,7 @@ class ReviewList(Resource):
                 return {'error': 'You have already reviewed this place.'}, 400
         try:
             review_data["user_id"] = current_user["id"]
+            print(review_data)
             new_review = facade.create_review(review_data)
             return new_review.to_dict(), 201
         except (TypeError, ValueError) as e:
