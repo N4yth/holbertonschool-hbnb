@@ -121,26 +121,25 @@ function displayPlaceDetails (place) {
         document.getElementById('personal-review-rating').textContent = `rating : ${element.rating}/5`;
         document.getElementById('personal-review-text').textContent = element.text;
         OwnReview = 1; // set the var to confirm the place has been review by the current user
-      } else {
-        // display the review as the usual div
-        const reviewTitle = document.createElement('li');
-        const reviewRating = document.createElement('li');
-        const reviewContet = document.createElement('li');
-        const reviewWriter = document.createElement('li');
-        reviewTitle.classList.add('reviews-title');
-        reviewRating.classList.add('reviews-rating');
-        reviewContet.classList.add('reviews-text');
-        reviewWriter.classList.add('reviews-owner');
-        reviewTitle.textContent = element.title;
-        reviewRating.textContent = `rating : ${element.rating}/5`;
-        reviewContet.textContent = element.text;
-        reviewWriter.textContent = `- ${userName}`;
-        reviewsCard.appendChild(reviewTitle);
-        reviewsCard.appendChild(reviewRating);
-        reviewsCard.appendChild(reviewContet);
-        reviewsCard.appendChild(reviewWriter);
-        document.getElementById('existing-review').appendChild(reviewsCard);
       }
+      // display the review as the usual div
+      const reviewTitle = document.createElement('li');
+      const reviewRating = document.createElement('li');
+      const reviewContet = document.createElement('li');
+      const reviewWriter = document.createElement('li');
+      reviewTitle.classList.add('reviews-title');
+      reviewRating.classList.add('reviews-rating');
+      reviewContet.classList.add('reviews-text');
+      reviewWriter.classList.add('reviews-owner');
+      reviewTitle.textContent = element.title;
+      reviewRating.textContent = `rating : ${element.rating}/5`;
+      reviewContet.textContent = element.text;
+      reviewWriter.textContent = `- ${userName}`;
+      reviewsCard.appendChild(reviewTitle);
+      reviewsCard.appendChild(reviewRating);
+      reviewsCard.appendChild(reviewContet);
+      reviewsCard.appendChild(reviewWriter);
+      document.getElementById('existing-review').appendChild(reviewsCard);
     });
     // set a special content for the div where is display the review of the current user
     if (OwnReview === 0) {
@@ -222,7 +221,7 @@ async function addReview () {
   });
   if (response.ok) {
     window.location.reload();
-    document.getElementById('review-content').value = '';
+    document.getElementById('content').value = '';
   } else {
     const msg = await response.json();
     alert('Post failed: ' + msg.error);
@@ -254,8 +253,9 @@ async function suprReview () {
 async function modifyReview () {
   // fetch the new review data
   const token = getCookie('token');
-  const text = document.getElementById('review-content').value;
+  const text = document.getElementById('content').value;
   const rating = document.getElementById('rating').value;
+  const title = document.getElementById('title').value;
   const reviewId = document.getElementById('log-user-review').dataset.id;
   const response = await fetch(`http://127.0.0.1:5000/api/v1/reviews/${reviewId}`, {
     method: 'PUT',
