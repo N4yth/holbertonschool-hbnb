@@ -1,24 +1,6 @@
-/* 
-  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
-*/
-
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --button-color:#ffd30f;
-  --button-color-hover:#c29f04;
   --font-family-place-title: 'Roboto', sans-serif;
   --font-family: 'Roboto', sans-serif;
-}
-
-
-#index-button, #login-button,#add-review-button {
-    height: 1.75rem;
-    width: 4.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 0.5rem;
 }
 
 #add-review-button {
@@ -31,80 +13,104 @@
 }
 
 #place-img {
-    height: 20rem;
-    width: 50rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 1rem;
-}
-
-.button {
-    background-color: var(--button-color);
-}
-
-.button:hover {
-    cursor: pointer;
-    background-color: var(--button-color-hover);
-    transform: translateY(-3px);
-    box-shadow: 1px 1px 1px 1px #333;
+    height: 90%;
+    width: 40%;
+    margin: 2.5%;
+    border-radius: 10px;
 }
 
 h3 {
     font-family: var(--font-family-place-title);
     font-size: 30px;
     background-color: var(--primary-color);
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 10px;
-    height: 5rem;
-    margin: 0 15rem 0 15rem;
+    height: 10dvh;
+    margin: 1dvh 5dvh 1dvh 5dvh;
     align-content: center;
     text-align: center;
 }
 
 .review-card {
     display: flex;
+    flex-direction: column;
     font-family: var(--font-family-place-title);
     font-size: 15px;
     background-color: var(--secondary-color);
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 10px;
-    width: 17rem;
-    height: 5.5rem;
-    margin: 0rem 1rem;
+    width: 20rem;
+    height: 100%;
+    margin: 0rem 1.5rem;
     padding: 5px;
     text-align: left;
+    color: #fff;
+}
+
+#existing-review{
+    display: flex;
+    flex-direction: row;
+    width: 70rem;
+    height: 100%;
+    color: #333;
+}
+
+#log-user-review{
+    width: 30dvh;
+    height: 40dvh;
 }
 
 #amenities{
     font-family: var(--font-family-place-title);
     font-size: 30px;
     background-color: var(--primary-color);
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 10px;
-    height: 4rem;
+    height: 10dvh;
     margin: 0.75rem;
     align-content: center;
     text-align: center;
 }
 
-#place-details {
+#place-text {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 55%;
     font-size: 25px;
     background-color: var(--secondary-color);
-    border: 1px solid #ddd;
     border-radius: 10px;
-    height: 22rem;
-    margin: 0rem 15rem 0.5rem 15rem;
+    margin: 2.5% 0;
     align-content: center;
     text-align: center;
 }
 
-#place-text {
-    font-family: var(--font-family-place-title);
-    align-content: center;
-    text-align: center;
-    width: 70rem;
+#place {
+    display: flex;
+    flex-direction: row;
+    margin-top: 11.5dvh;
+    height: 55dvh;
+}
+
+#place-details {
+    background-color: var(--secondary-color);
+    margin-left: 20%;
+    width: 60%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3dvh;
+}
+
+#amenities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenities-card {
+    margin: 5px;
 }
 
 #see-more-review {
@@ -115,18 +121,16 @@ h3 {
     margin: 0rem;
     font: 15px var(--font-family-place-title);
 }
-
-#see-more-review:hover {
-    cursor: pointer;
-    transform: translateY(10px);
-    font: 20px bold ;
-}
     
 #reviews {
+    width: 90%;
+    height: 24dvh;
     display: flex;
     flex-direction: row-reverse;
-    margin: 0.25rem 3rem;
+    margin: 0 5%;
 }
+
+/* --- Review popup ---*/
 
 .popup-frame{
     width: 100%;
@@ -148,12 +152,194 @@ h3 {
     display: flex;
 }
 
-#review-form{
-    background: #333;
-    width: 40%;
-    height: 30%;
-    position: fixed;
+#review-form {
     display: flex;
     flex-direction: column;
-    margin: 35% 30%;
+    border-radius: 5px;
+    height: 50dvh;
+    width: 45dvh;
+    padding: 2dvh;
+    background-color: #ddd;
+    color: #333;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#your-title-rating {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+#your-text-rating {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+#your-rating {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  margin: 2% 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+select {
+    margin: 0.5rem;
+    width: 15%;
+}
+
+textarea {
+    padding: 7px 6px;
+    font-size: 0.75rem;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+    background: #e8e8e8;
+    height: 25%;
+}
+
+input {
+    padding: 7px 6px;
+    font-size: 0.75rem;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+    background: #e8e8e8;
+}
+
+#place-info {
+    margin-top: 1dvh;
+    align-content:start;
+    height: 20dvh;
+}
+
+#place-details li{
+    font-size: 20px;
+    margin-left: 5dvh;
+    display: flex;
+}
+
+#place-description {
+    margin-top: 2dvh;
+}
+
+.description {
+    width: 90%;
+    min-width: 90%;
+    text-align: start;
+}
+
+/* --- personnel review --- */
+
+#option-owne-review {
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    margin: 2.5%;
+    height: 20%;
+}
+
+#personal-review-title {
+    height: 10%;
+}
+
+#personal-review-text {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 2% 3%;
+    padding: 2% 3%;
+    height: 45%;
+}
+
+#personal-review-rating {
+    height: 10%;
+}
+
+#personal-review-owner {
+    align-items: center;
+    text-align: end;
+    margin-right: 5%;
+    height: 10%;
+}
+
+#personal-review-update-button, #personal-review-delete-button {
+    margin: 2%;
+    align-items: center;
+    text-align: center;
+}
+
+#add-review-button {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+#add-review-button:hover {
+    color: var(--primary-color);
+}
+
+.reviews-owner {
+    align-items: center;
+    text-align: end;
+    height: 7.5%;
+    width: 95%;
+    margin-top: 0.5%;
+    margin-bottom: 2%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.reviews-title {
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    height: 12.5%;
+    width: 98%;
+    margin-bottom: 1%;
+}
+
+.reviews-text {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin: 1% 2.5%;
+    padding: 1.5%;
+}
+
+.reviews-rating {
+    display: flex;
+    height: 10%;
+    width: 98%;
+    margin: 3%;
+}
+
+#popup-submit-button {
+    margin: 2% 25%;
+    height: 5dvh;
+}
+
+#quit-popup {
+    align-self: self-end;
+    margin: 0%;
+    width: 4dvh;
+    height: 4dvh;
+}
+
+#review-content {
+    height: 15dvh;
 }
