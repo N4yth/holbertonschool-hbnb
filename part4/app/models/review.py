@@ -5,6 +5,7 @@ from sqlalchemy.orm import validates
 class Review(BaseModel):
     __tablename__ = 'review'
 
+    title =  db.Column(db.String(255), nullable=False)
     text = db.Column(db.Text, nullable=False)
     rating = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.String(36), db.ForeignKey('user.id'), nullable=False)
@@ -20,6 +21,14 @@ class Review(BaseModel):
             return rating
         else:
             raise ValueError ("rating must be between 1 and 5")
+        
+    @validates("title")
+    def validate_title(self, key, title):
+        title = str(title)
+        if(len(title) < 51 and title != ""):
+            return title
+        else:
+            raise ValueError ("Title is not conforme to standar")
 
     @validates("text")
     def validate_text(self, key, text):
@@ -33,6 +42,7 @@ class Review(BaseModel):
             'id': self.id,
             'place': self.place_id,
             'user': self.user_id,
+            'title': self.title,
             'rating': self.rating,
             'text': self.text
         }
