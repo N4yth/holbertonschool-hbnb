@@ -26,7 +26,7 @@ class Login(Resource):
             return {'error': 'Invalid credentials'}, 401
 
         # Step 3: Create a JWT token with the user's id and is_admin flag
-        access_token = create_access_token(identity={'id': str(user.id), 'is_admin': user.is_admin})
+        access_token = create_access_token(identity={'id': str(user.id), 'is_admin': user.is_admin}, expires_delta=False)
         
         # Step 4: Return the JWT token to the client
         return {
