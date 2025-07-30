@@ -12,57 +12,67 @@
 
 <body>
     <header>
-        <img src="./image/logo.png" class="logo">
+        <img src="./image/logo.png" alt="holberton hbnb logo" class="logo">
         <nav id="top_nav_bar">
-            <button class="button" id="index-button" onclick="goIndex()">Index</button>
-            <button class="button" id="login-button" onclick="goLogin()">Login</button>
+            <a class="button" id="index-button" href="./index.html">Index</a>
+            <a class="button" id="login-button" href="./login.html">Login</a>
             <button class="button" id="logout-button" onclick="logOut()">Logout</button>
             <p id="connected"></p>
         </nav>
     </header>
     <main>
-        <section id="place-details">
-            <section id="place-text">
-                <h3 id="place-title">No Place Found</h3>
-                <ul class="place-info">
-                    <li id="place-description">No Description Found</li>
-                    <li id="place-price">No Price Found</li>
-                    <li id="place-owner">No owner Found</li>
-                </ul>
-                <h5 id="place-title">amenities :</h5>
-                <section id="amenities">
-
+        <div id="place">
+            <div id="place-details">
+                <section id="place-text">
+                    <h3 id="place-title">No Place Found</h3>
+                    <ul id="place-info">
+                        <li id="place-owner">No owner Found</li>
+                        <li id="place-price">No Price Found</li>
+                        <li id="place-description">No Description Found</li>
+                    </ul>
+                    <section id="amenities">
+                        <h5 id="amenities-title">amenities :</h5>
+                    </section>
                 </section>
-            </section>
-            <img id="place-img" src="./image/imgNotFound.jpg">
-            <article id="log-user-review">
-                
-            </article>
-        </section>
-        <section id="reviews">
-            <button class="button" id="add-review-button" onclick="togglepopup()">Add a Review</button>
-            <section id="existing-review">
+                <img id="place-img" alt="place main img" src="./image/imgNotFound.jpg">
+            </div>
+            <ul class="review-card" id="log-user-review">
+                <li id="personal-review-title">Title</li>
+                <li id="personal-review-rating"></li>
+                <li id="personal-review-text"></li>
+                <li id="personal-review-owner"></li>
+                <li id="option-owne-review">
+                    <button class="button" id="personal-review-update-button" onclick="toggleUpdatePopup()">modify Review</button>
+                    <button class="button" id="personal-review-delete-button" onclick="suprReview()">delete Review</button>
+                </li>
+            </ul>
+        </div>
+        <div id="reviews">
+            <button class="button" id="add-review-button" onclick="toggleAddPopup()">Add a Review</button>
+            <ul id="existing-review">
 
-            </section>
-        </section>
-        <section class="popup-frame">
+            </ul>
+        </div>
+        <div class="popup-frame">
             <form id="review-form" onsubmit="return false">
                 <h2>Add a Review</h2>
-                <label for="review-content">Your Review:</label>
-                <textarea id="review-content" name="review" required></textarea>
-                <label for="rating">Rating:</label>
+                <label id="your-title-rating" for="title">Title:</label>
+                <input id="title" name="title" required>
+                <label id="your-text-rating" for="content">Your Review:</label>
+                <textarea id="content" name="review" required></textarea>
+                <label id="your-rating" for="rating">Rating:</label>
                 <select id="rating" name="rating" required>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option value="" disabled selected>Select a rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-                <button type="submit" onclick="addReview()">Submit Review</button>
-                <button class="button" onclick="togglepopup()">X</button>
+                <button type="submit" class="button" id="popup-submit-button" onclick="">Submit Review</button>
+                <button class="button" id="quit-popup" onclick="closePopup()">X</button>
             </form>
-        </section>
-        <button id="see-more-review">See more</button>
+        </div>
     </main>
     <footer>
         2025 HBnB Evolution. all rights reserved.
